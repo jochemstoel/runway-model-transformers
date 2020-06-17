@@ -1,13 +1,14 @@
 # Runway Transformers Model Port
 
-This repository contains a Runway port of the transformers model. It can be used for natural language processing and sentiment analysis.
+This repository contains a Runway port of the [transformers model](https://github.com/huggingface/transformers). It can be used for natural language processing and sentiment analysis.
 
 This model has two methods.
+
 ### Query
 Ask a question about a text. It will return a score (confidence), the answer, and the start/end position of the answer in the document.
 
-Inputs: document (string), question (string)
-Outputs: answer (string), start (number), end (number), score (float number)
+* Inputs: document (string), question (string)
+* Outputs: answer (string), start (number), end (number), score (float number)
 
 ```js 
 fetch('http://localhost:8000/query', {
@@ -28,8 +29,8 @@ fetch('http://localhost:8000/query', {
 ### Sentiment
 Sentiment: determine sentiment of a text.
 
-Inputs: document (string)
-Outputs: label (string 'POSITIVE' or 'NEGATIVE'), score (float number)
+* Inputs: document (string)
+* Outputs: label (string 'POSITIVE' or 'NEGATIVE'), score (float number)
 ```js 
 fetch('http://localhost:8000/sentiment', {
         method: 'POST',
